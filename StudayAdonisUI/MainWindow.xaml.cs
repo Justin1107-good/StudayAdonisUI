@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdonisUI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,6 +32,7 @@ namespace StudayAdonisUI
         /// <param name="e"></param>
         private void ButtonAddName_Click(object sender, RoutedEventArgs e)
         {
+
             //确保文本框包含名称。
             //验证文本框中输入的名称是否已经存在。
             //将名称添加到列表框。
@@ -44,6 +46,28 @@ namespace StudayAdonisUI
                 MessageBox.Show("名称不能为空！");
                 return;
             }
+        }
+             /// <summary>
+             /// 修改试图色
+             /// </summary>
+             /// <param name="sender"></param>
+             /// <param name="e"></param>
+        private void button_CheckLight(object sender, RoutedEventArgs e)
+        {
+            if (btnChange.Content.ToString() == "☀")
+            {
+                AdonisUI.ResourceLocator.SetColorScheme(Application.Current.Resources, ResourceLocator.DarkColorScheme);
+              
+                btnChange.Content = "🌙";
+
+            }
+            else
+            {
+                AdonisUI.ResourceLocator.SetColorScheme(Application.Current.Resources, ResourceLocator.LightColorScheme);
+                btnChange.Content = "☀";
+            }
+
+
         }
     }
 }
