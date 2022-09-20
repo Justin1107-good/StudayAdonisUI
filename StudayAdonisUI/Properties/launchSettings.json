@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "StudayAdonisUI": {
+      "commandName": "Project",
+      "commandLineArgs": "c:\\Windows\\win.ini"
+    }
+  }
+}

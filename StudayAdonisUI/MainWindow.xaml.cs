@@ -43,7 +43,9 @@ namespace StudayAdonisUI
             }
             else
             {
-                MessageBox.Show("名称不能为空！");
+                AdonisUI.Controls.MessageBox.Show("名称不能为空！", "Info", AdonisUI.Controls.MessageBoxButton.OKCancel, AdonisUI.Controls.MessageBoxImage.Information);
+                //AdonisUI.Controls.MessageBox.Show("名称不能为空！");
+                //MessageBox.Show("名称不能为空！");
                 return;
             }
         }

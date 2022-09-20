@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>重要的Window属性</h1>
+    <p>WPF的Window类有许多有趣的属性，您可以设置这些属性来控制应用程序窗口的外观和行为。<br />这里是最有趣的一个简要列表：</p>
+    <p><b>Icon - </b>允许你定义窗口的图标，该图标通常显示在窗口标题之前的左上角。</p>
+    <p><b>ResizeMode -</b>这可以控制最终用户是否以及如何调整窗口大小。默认是CanResize,允许用户像任何其他窗口一样调整窗口大小，<br />使用最大化/最小化按钮或拖动其中一个边缘。CanMinimize将允许用户最小化窗口，但不能最大化它或拖动它更大或更小。<br />NoResize是最严格的，最大化和最小化按钮被移除，窗口不能被拖得更大或更小。</p>
+    <p><b>ShowInTaskbar - </b>默认值为true，但如果将其设置为false，则窗口将不会在Windows任务栏中显示。适用于非主窗口或应尽量减少托盘的应用程序。</p>
+    <p><b>SizeToContent -  </b>决定Window是否应调整自身大小以自动适应其内容。<br />默认是Manual, 这意味着窗口不会自动调整大小。其他选项有Width，Height和WidthAndHeight，分别对应自动调整宽度，高度或同时调整两者。</p>
+    <p><b>Topmost -</b>默认是false, 但如果设置为true，除非最小化，否则您的窗口将保持在其他窗口之上。仅适用于特殊情况。</p>
+    <p><b>WindowStartupLocation - </b>控制窗口的初始位置。默认是Manual, 表示窗口最初将根据窗口的Top和Left属性进行定位。<br />其他选项是CenterOwner，它将窗口定位在其所有者窗口的中心，以及CenterScreen，它将窗口定位在屏幕的中心</p>
+    <p><b>WindowState -  </b>控制初始窗口状态。它可以是Normal，Maximized或Minimized。默认值为Normal，<br />除非您希望窗口最大化或最小化，否则应该使用它。</p>
+</body>
+</html>

@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StudayAdonisUI" 
+        xmlns:adonisExtensions="clr-namespace:AdonisUI.Extensions;assembly=AdonisUI" 
         mc:Ignorable="d"
         Title="Names" Height="180" Width="260">
     <Window.Style>
@@ -21,11 +22,14 @@
         </Grid.ColumnDefinitions>
 
         <Label>Names</Label>
-        <Button Grid.Column="1" Click="button_CheckLight"  x:Name="btnChange"  Content="☀" Height="25" Width="30" ></Button>
+        <Button   Grid.Column="1" Click="button_CheckLight"  x:Name="btnChange"  Content="☀" Height="25" Width="30" ></Button>
         <ListBox Grid.Row="1" x:Name="lstNames"  BorderBrush="Beige"/>
         <StackPanel Grid.Row="1" Grid.Column="1" Margin="5,0,0,0">
             <TextBox x:Name="txtName" />
-            <Button x:Name="btnAdd" Margin="0,5,0,0" Click="ButtonAddName_Click">Add Name</Button>
+            <Button x:Name="btnAdd" Margin="0,5,0,0" Click="ButtonAddName_Click" adonisExtensions:RippleExtension.BackgroundBrush="Red"  adonisExtensions:RippleExtension.FadeInDuration="200">Add Name</Button>
+
+          
+            
         </StackPanel>
     </Grid>
 </Window>

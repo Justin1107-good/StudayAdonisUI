@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudayAdonisUI", "StudayAdonisUI\StudayAdonisUI.csproj", "{EA0530C3-55E6-4CD1-8B93-FB3E82310C28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudayAdonisUI", "StudayAdonisUI\StudayAdonisUI.csproj", "{EA0530C3-55E6-4CD1-8B93-FB3E82310C28}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HC", "HC", "{ADE1695F-7631-4E80-9FEA-147D81C5DA92}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HandyControl220916", "HandyControl220916\HandyControl220916.csproj", "{7F70907A-73D7-4845-9CA7-017F29305C10}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dropdown Menu", "Dropdown Menu", "{C112963C-A9FE-434C-88E0-4863175DC9E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DropdownMenu", "DropdownMenu\DropdownMenu.csproj", "{7774AF89-6213-419B-BD36-7C478767DDBE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +23,21 @@ Global
 		{EA0530C3-55E6-4CD1-8B93-FB3E82310C28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA0530C3-55E6-4CD1-8B93-FB3E82310C28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA0530C3-55E6-4CD1-8B93-FB3E82310C28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F70907A-73D7-4845-9CA7-017F29305C10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F70907A-73D7-4845-9CA7-017F29305C10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F70907A-73D7-4845-9CA7-017F29305C10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F70907A-73D7-4845-9CA7-017F29305C10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7774AF89-6213-419B-BD36-7C478767DDBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7774AF89-6213-419B-BD36-7C478767DDBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7774AF89-6213-419B-BD36-7C478767DDBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7774AF89-6213-419B-BD36-7C478767DDBE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7F70907A-73D7-4845-9CA7-017F29305C10} = {ADE1695F-7631-4E80-9FEA-147D81C5DA92}
+		{7774AF89-6213-419B-BD36-7C478767DDBE} = {C112963C-A9FE-434C-88E0-4863175DC9E9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {74751D76-EBFF-4735-9809-A5E88E045D72}
