@@ -1,4 +1,5 @@
-﻿using DropdownMenu.ViewModel;
+﻿using DropdownMenu.DB;
+using DropdownMenu.ViewModel;
 using MaterialDesignThemes.Wpf;
 using System;
 using System.Collections.Generic;
@@ -55,6 +56,9 @@ namespace DropdownMenu
             Menu.Children.Add(new UserControlMenuItem(item1, this));
             Menu.Children.Add(new UserControlMenuItem(item2, this)); 
             Menu.Children.Add(new UserControlMenuItem(item4, this));
+
+            SqlSugarHelper sqlSugar = new SqlSugarHelper();
+            sqlSugar.InintialDB();
         }
         internal void SwitchScreen(object sender)
         {
@@ -64,6 +68,11 @@ namespace DropdownMenu
                 StackPanelMain.Children.Clear();
                 StackPanelMain.Children.Add(screen);
             }
+        }
+
+        private void settinglistitem_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+
         }
     }
 }

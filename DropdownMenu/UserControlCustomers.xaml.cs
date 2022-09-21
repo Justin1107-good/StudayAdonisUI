@@ -26,12 +26,27 @@ namespace DropdownMenu
         }
         public void RelodData()
         {
-            List<TestModel> list = new List<TestModel> {
-              new TestModel{  Code="M", Name="Material Design", Description="Material Design in xaml Toolkit", Options="Test"},
-               new TestModel{  Code="F", Name="Material Design1", Description="Material Design in xaml Toolkit 1", Options="Test1"},
-               new TestModel{  Code="MD", Name="Material Design2", Description="Material Design in xaml Toolkit 2", Options="Test2"}
-              , new TestModel{  Code="H", Name="Material Design3", Description="Material Design in xaml Toolkit 3", Options="Test3"}
-              , new TestModel{  Code="Y", Name="Material Design4", Description="Material Design in xaml Toolkit 4", Options="Test4"}
+            List<ServiceAndUserV0> list = new List<ServiceAndUserV0> {
+              new ServiceAndUserV0{
+                services_id="00555b29-e6c9-4155-8206-3695c6b22311",
+                 service_name="APPSRV21",
+                  apply_souse="",
+                   company="江苏中煤电缆有限公司",
+                    english_abbreviation="SP",
+                     position="",
+                      name="沈建强",
+                      phone="13921381980",
+                      email="sjq15312253367@126.com",
+                       open_date="2022/9/21 0:00:00",
+                       close_date="2022/9/21 0:00:00",
+                       account_number="沈建强",
+                       use_name="沈建强",
+                       start_password="Sky123123sky",
+                       status=1,
+                       user_describe="",
+                       user_sign=3,
+
+              } 
             };
             accentListView.ItemsSource = list;
         }
@@ -52,13 +67,18 @@ namespace DropdownMenu
                         break;
                     case "深色":
                         //_ = MaterialDesignThemes.Wpf.ColorZoneMode.SecondaryDark;
-                         MaterialDesignColors.ColorManipulation.ColorAssist.IsLightColor(Colors.DarkBlue);
+                        MaterialDesignColors.ColorManipulation.ColorAssist.IsLightColor(Colors.DarkBlue);
                         break;
                     case "退出":
-                        W
+
                         break;
                 }
             }
+        }
+
+        private void BasicRatingBar_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
         }
     }
 }

@@ -9,34 +9,40 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="88"/>
+            <RowDefinition Height="50"/>
             <RowDefinition Height="70"/>
             <RowDefinition Height="20"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <materialDesign:ColorZone   Mode="Inverted"   Padding="16">
-            <DockPanel>
-                <materialDesign:PopupBox       DockPanel.Dock="Right"       PlacementMode="BottomAndAlignRightEdges">
-                    <ListBox x:Name="settinglistitem" PreviewMouseDown="settinglistitem_PreviewMouseDown">
-                        <ListBoxItem           Content="浅色" />
-                        <ListBoxItem           Content="深色" />
-                        <ListBoxItem           Content="退出" />
-                    </ListBox>
-                </materialDesign:PopupBox>
-                <StackPanel       Orientation="Horizontal">
-                    <ToggleButton         Style="{StaticResource MaterialDesignHamburgerToggleButton}" />
-                    <TextBlock         VerticalAlignment="Center"         Margin="16 0 0 0"         Text="Material Design In XAML Toolkit" />
-                </StackPanel>
-            </DockPanel>
-        </materialDesign:ColorZone>
-        <TextBlock Grid.Row="1">
-           <TextBox   x:Name="NameTextBox"   materialDesign:HintAssist.Hint="Name"   materialDesign:HintAssist.HelperText="Helper text longer than error"> </TextBox> 
-            <hc:TextBox  Text="演示APP"/>
+        <StackPanel   Orientation="Horizontal" Grid.Row="0">
+            <materialDesign:RatingBar   x:Name="BasicRatingBar"   Value="3" ValueChanged="BasicRatingBar_ValueChanged" />
+
+        </StackPanel>
+        <TextBlock Grid.Row="1" Margin="10">  
+             <TextBox   Style="{StaticResource MaterialDesignFilledTextBox}"   VerticalAlignment="Top"   materialDesign:HintAssist.Hint="请输入搜索服务"  
+                        materialDesign:HintAssist.HelperText="搜索服务">    
+             </TextBox> 
+             
+             <TextBox   Style="{StaticResource MaterialDesignFilledTextBox}"   VerticalAlignment="Top"   materialDesign:HintAssist.Hint="请输入搜索账号"  
+                        materialDesign:HintAssist.HelperText="搜索账号"> 
+             </TextBox> 
+             <TextBox   Style="{StaticResource MaterialDesignFilledTextBox}"   VerticalAlignment="Top"   materialDesign:HintAssist.Hint="请输入搜索姓名"  
+                        materialDesign:HintAssist.HelperText="搜索姓名">   
+             </TextBox>
+            <TextBox   Style="{StaticResource MaterialDesignFilledTextBox}"   VerticalAlignment="Top"   materialDesign:HintAssist.Hint="请输入搜索手机号"    
+                       materialDesign:HintAssist.HelperText="搜索手机号">    
+            </TextBox>
+            
+            <Label Margin="10"/>
+            <Button   Style="{StaticResource MaterialDesignOutlinedLightButton}"   ToolTip="MaterialDesignOutlinedButton"   Content="搜索" Height="35" Width="80"   IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" />
+            <Label Margin="5"/>             <Button   Style="{StaticResource MaterialDesignOutlinedLightButton}"   ToolTip="MaterialDesignRaisedLightButton"   Content="导出" Height="35" Width="80"   IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" />
+            <Label Margin="5"/>             <Button   Style="{StaticResource MaterialDesignOutlinedLightButton}"   ToolTip="MaterialDesignRaisedSecondaryLightButton"   Content="新增" Height="35" Width="80"   IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" />
         </TextBlock>
 
         <ProgressBar Grid.Row="2"
   IsIndeterminate="True" />
-        <ListView
+        <DataGrid   ItemsSource="{Binding Items2}" Grid.Row="3" x:Name="accentListView"   CanUserAddRows="False"   SelectionUnit="Cell"   SelectionMode="Extended" />
+        <!--<ListView
   ItemsSource="{Binding Items1}" Grid.Row="3" x:Name="accentListView">
             <ListView.View>
                 <GridView>
@@ -54,7 +60,7 @@
         Header="Options"/>
                 </GridView>
             </ListView.View>
-        </ListView>
+        </ListView>-->
 
 
     </Grid>

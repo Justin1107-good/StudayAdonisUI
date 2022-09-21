@@ -18,21 +18,36 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <!--<materialDesign:ColorZone Mode="PrimaryMid" Grid.ColumnSpan="2" HorizontalAlignment="Stretch">
+        <materialDesign:ColorZone Mode="PrimaryMid" Grid.ColumnSpan="2" HorizontalAlignment="Stretch">
             <Grid>
-                <materialDesign:PopupBox PlacementMode="BottomAndAlignRightEdges" HorizontalAlignment="Right" Margin="10"/>
+                <!--<materialDesign:PopupBox PlacementMode="BottomAndAlignRightEdges" HorizontalAlignment="Right" Margin="10"/>-->
+                <materialDesign:ColorZone   Mode="Inverted"   Padding="16">
+                    <DockPanel>
+                        <materialDesign:PopupBox       DockPanel.Dock="Right"       PlacementMode="BottomAndAlignRightEdges">
+                            <ListBox x:Name="settinglistitem" PreviewKeyDown="settinglistitem_PreviewKeyDown">
+                                <ListBoxItem           Content="浅色" />
+                                <ListBoxItem           Content="深色" />
+                                <ListBoxItem           Content="退出" />
+                            </ListBox>
+                        </materialDesign:PopupBox>
+                        <StackPanel       Orientation="Horizontal">
+                            <ToggleButton         Style="{StaticResource MaterialDesignHamburgerToggleButton}" />
+                            <TextBlock         VerticalAlignment="Center"         Margin="16 0 0 0"         Text="Material Design In XAML Toolkit" />
+                        </StackPanel>
+                    </DockPanel>
+                </materialDesign:ColorZone>
             </Grid>
-        </materialDesign:ColorZone>-->
+        </materialDesign:ColorZone>
 
         <Grid HorizontalAlignment="Stretch" Grid.Row="1" Background="{StaticResource PrimaryHueMidBrush}">
             <Grid.RowDefinitions>
-                <RowDefinition Height="70"/>
+                <!--<RowDefinition Height="70"/>-->
                 <RowDefinition Height="326*"/>
             </Grid.RowDefinitions>
-            <Grid Grid.Row="0" Background="GhostWhite">
-                <Image Source="/Images/logo.jpg" /> 
-            </Grid>
-            <ScrollViewer HorizontalAlignment="Stretch" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Grid.Row="1">
+            <!--<Grid Grid.Row="0" Background="GhostWhite">
+                <Image Source="/Images/logo.jpg" /> s
+            </Grid>-->
+            <ScrollViewer HorizontalAlignment="Stretch" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Grid.Row="0">
                 <StackPanel x:Name="Menu" Margin="10"/>
             </ScrollViewer>
         </Grid>

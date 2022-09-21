@@ -9,17 +9,65 @@
   <ItemGroup>
     <None Remove="Images\first.jpg" />
     <None Remove="Images\logo.jpg" />
+    <None Remove="Resources\Noto\NotoSans-Bold.ttf" />
+    <None Remove="Resources\Noto\NotoSans-BoldItalic.ttf" />
+    <None Remove="Resources\Noto\NotoSans-Italic.ttf" />
+    <None Remove="Resources\Noto\NotoSans-Regular.ttf" />
+    <None Remove="Resources\Roboto\Roboto-Black.ttf" />
+    <None Remove="Resources\Roboto\Roboto-BlackItalic.ttf" />
+    <None Remove="Resources\Roboto\Roboto-Bold.ttf" />
+    <None Remove="Resources\Roboto\Roboto-BoldItalic.ttf" />
+    <None Remove="Resources\Roboto\Roboto-Italic.ttf" />
+    <None Remove="Resources\Roboto\Roboto-Light.ttf" />
+    <None Remove="Resources\Roboto\Roboto-LightItalic.ttf" />
+    <None Remove="Resources\Roboto\Roboto-Medium.ttf" />
+    <None Remove="Resources\Roboto\Roboto-MediumItalic.ttf" />
+    <None Remove="Resources\Roboto\Roboto-Regular.ttf" />
+    <None Remove="Resources\Roboto\Roboto-Thin.ttf" />
+    <None Remove="Resources\Roboto\Roboto-ThinItalic.ttf" />
+    <None Remove="Resources\Roboto\RobotoCondensed-Bold.ttf" />
+    <None Remove="Resources\Roboto\RobotoCondensed-BoldItalic.ttf" />
+    <None Remove="Resources\Roboto\RobotoCondensed-Italic.ttf" />
+    <None Remove="Resources\Roboto\RobotoCondensed-Light.ttf" />
+    <None Remove="Resources\Roboto\RobotoCondensed-LightItalic.ttf" />
+    <None Remove="Resources\Roboto\RobotoCondensed-Regular.ttf" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Images\first.jpg" />
     <Resource Include="Images\logo.jpg" />
+    <Resource Include="Resources\Noto\NotoSans-Bold.ttf" />
+    <Resource Include="Resources\Noto\NotoSans-BoldItalic.ttf" />
+    <Resource Include="Resources\Noto\NotoSans-Italic.ttf" />
+    <Resource Include="Resources\Noto\NotoSans-Regular.ttf" />
+    <Resource Include="Resources\Roboto\Roboto-Black.ttf" />
+    <Resource Include="Resources\Roboto\Roboto-BlackItalic.ttf" />
+    <Resource Include="Resources\Roboto\Roboto-Bold.ttf" />
+    <Resource Include="Resources\Roboto\Roboto-BoldItalic.ttf" />
+    <Resource Include="Resources\Roboto\Roboto-Italic.ttf" />
+    <Resource Include="Resources\Roboto\Roboto-Light.ttf" />
+    <Resource Include="Resources\Roboto\Roboto-LightItalic.ttf" />
+    <Resource Include="Resources\Roboto\Roboto-Medium.ttf" />
+    <Resource Include="Resources\Roboto\Roboto-MediumItalic.ttf" />
+    <Resource Include="Resources\Roboto\Roboto-Regular.ttf" />
+    <Resource Include="Resources\Roboto\Roboto-Thin.ttf" />
+    <Resource Include="Resources\Roboto\Roboto-ThinItalic.ttf" />
+    <Resource Include="Resources\Roboto\RobotoCondensed-Bold.ttf" />
+    <Resource Include="Resources\Roboto\RobotoCondensed-BoldItalic.ttf" />
+    <Resource Include="Resources\Roboto\RobotoCondensed-Italic.ttf" />
+    <Resource Include="Resources\Roboto\RobotoCondensed-Light.ttf" />
+    <Resource Include="Resources\Roboto\RobotoCondensed-LightItalic.ttf" />
+    <Resource Include="Resources\Roboto\RobotoCondensed-Regular.ttf" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="HandyControl" Version="3.3.0" />
     <PackageReference Include="MaterialDesignColors" Version="2.0.7" />
     <PackageReference Include="MaterialDesignThemes" Version="4.6.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="SQLite" Version="3.13.0" />
+    <PackageReference Include="SqlSugarCore" Version="5.1.3.1" />
+    <PackageReference Include="System.Data.SQLite" Version="1.0.116" />
   </ItemGroup>
 
   <ItemGroup>

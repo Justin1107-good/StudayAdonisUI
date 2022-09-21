@@ -6,9 +6,13 @@ using System.Threading.Tasks;
 
 namespace DropdownMenu.ViewModel
 {
-    public class SkyUserInfo
+    public class ServiceAndUserV0 
     {
-        
+        /// <summary>
+        /// 服务名称
+        /// </summary>
+        public string service_name { get; set; }
+
         public string id { get; set; }
         public string apply_souse { get; set; }
         public string company { get; set; }
