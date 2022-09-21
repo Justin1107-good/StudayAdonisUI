@@ -1,4 +1,6 @@
-﻿using DropdownMenu.ViewModel;
+﻿using DropdownMenu.DB;
+using DropdownMenu.Model.DBEntity;
+using DropdownMenu.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -19,11 +21,14 @@ namespace DropdownMenu
     /// </summary>
     public partial class UserControlCustomers : UserControl
     {
+        SqlSugarHelper sqlSugar = new SqlSugarHelper();
+
         public UserControlCustomers()
         {
             InitializeComponent();
             RelodData();
         }
+       
         public void RelodData()
         {
             List<ServiceAndUserV0> list = new List<ServiceAndUserV0> {
@@ -46,7 +51,7 @@ namespace DropdownMenu
                        user_describe="",
                        user_sign=3,
 
-              } 
+              }
             };
             accentListView.ItemsSource = list;
         }
@@ -79,6 +84,21 @@ namespace DropdownMenu
         private void BasicRatingBar_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
 
+        }
+
+        private void btn_add_Click(object sender, RoutedEventArgs e)
+        {
+
+            sqlSugar.InintialDB();
+            int h = sqlSugar.ExecuteInsert(new sky_application_service { service_name = "Test1", service_describe = "sqlsugar+sqlite insert data1", create_time = DateTime.Now.ToString("yyyyMMdd HH:ss:mm"), update_time = DateTime.Now.ToString("yyyyMMdd HH:ss:mm"), is_delete = 0, use_total = 30, use_opened_num = 25, use_surplus_num = 5 });
+            if (h > 0)
+            {
+                Console.WriteLine("服务：Test创建成功！");
+            }
+            else
+            {
+                Console.WriteLine("服务：Test创建失败！");
+            }
         }
     }
 }

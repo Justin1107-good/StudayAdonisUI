@@ -23,6 +23,8 @@ namespace DropdownMenu
     /// </summary>
     public partial class MainWindow : Window
     {
+        private readonly SqlSugarHelper _sqlSugar;
+
         public MainWindow()
         {
             InitializeComponent(); 
@@ -47,7 +49,7 @@ namespace DropdownMenu
  
 
             var menuFinancial = new List<SubItem>();
-            menuFinancial.Add(new SubItem("关于"));
+            menuFinancial.Add(new SubItem("关于",new UserControlliteratures()));
             menuFinancial.Add(new SubItem("版权"));
             var item4 = new ItemMenu("设置", menuFinancial, PackIconKind.ScaleBalance);
 
@@ -59,6 +61,13 @@ namespace DropdownMenu
 
             SqlSugarHelper sqlSugar = new SqlSugarHelper();
             sqlSugar.InintialDB();
+        }
+        public MainWindow(SqlSugarHelper sqlSugar) {
+            if (_sqlSugar==null)
+            {
+                _sqlSugar = new SqlSugarHelper();
+            }
+            _sqlSugar=sqlSugar;
         }
         internal void SwitchScreen(object sender)
         {

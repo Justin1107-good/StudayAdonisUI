@@ -34,9 +34,11 @@
             </TextBox>
             
             <Label Margin="10"/>
-            <Button   Style="{StaticResource MaterialDesignOutlinedLightButton}"   ToolTip="MaterialDesignOutlinedButton"   Content="搜索" Height="35" Width="80"   IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" />
-            <Label Margin="5"/>             <Button   Style="{StaticResource MaterialDesignOutlinedLightButton}"   ToolTip="MaterialDesignRaisedLightButton"   Content="导出" Height="35" Width="80"   IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" />
-            <Label Margin="5"/>             <Button   Style="{StaticResource MaterialDesignOutlinedLightButton}"   ToolTip="MaterialDesignRaisedSecondaryLightButton"   Content="新增" Height="35" Width="80"   IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" />
+            <Button   Style="{StaticResource MaterialDesignOutlinedLightButton}"   ToolTip="搜索"   Content="搜索" Height="35" Width="80"   IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" />
+            <Label Margin="5"/>             
+            <Button   Style="{StaticResource MaterialDesignOutlinedLightButton}"   ToolTip="导出查询到的所有数据到EXCEL"   Content="导出" Height="35" Width="80"   IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" />
+            <Label Margin="5"/>             
+            <Button x:Name="btn_add"   Style="{StaticResource MaterialDesignOutlinedLightButton}"   ToolTip="新增"   Content="新增" Height="35" Width="80"   IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Click="btn_add_Click" />
         </TextBlock>
 
         <ProgressBar Grid.Row="2"
