@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="DropdownMenu.UserControlLog"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DropdownMenu"
+              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel   Orientation="Horizontal" Grid.Row="0">
+            <materialDesign:RatingBar   x:Name="BasicRatingBar"   Value="3" ValueChanged="BasicRatingBar_ValueChanged" />
+        </StackPanel>
+        <TextBlock Grid.Row="1" Margin="10">  
+            <DatePicker   Width="100"   materialDesign:HintAssist.Hint="开始日期"   materialDesign:TextFieldAssist.HasClearButton="True"   Style="{StaticResource MaterialDesignFloatingHintDatePicker}" /> 
+             <DatePicker   Width="100"   materialDesign:HintAssist.Hint="结束日期"   materialDesign:TextFieldAssist.HasClearButton="True"   Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
+            
+            <Label Margin="10"/>             
+            <Button   Style="{StaticResource MaterialDesignOutlinedLightButton}"   ToolTip="搜索"   Content="搜索" Height="35" Width="80"   IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" />             
+            <Label Margin="5"/>                          
+            <Button   Style="{StaticResource MaterialDesignOutlinedLightButton}"   ToolTip="导出查询到的所有数据到EXCEL"   Content="导出" Height="35" Width="80"   IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" />             
+            <Label Margin="5"/>                          
+            <Button x:Name="btn_delete"   Style="{StaticResource MaterialDesignOutlinedLightButton}"   ToolTip="删除"   Content="新增" Height="35" Width="80"   IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Click="btn_delete_Click" /></TextBlock>
+        <ProgressBar Grid.Row="2"   IsIndeterminate="True" />
+        <DataGrid   ItemsSource="{Binding Items2}" Grid.Row="3" x:Name="logListView"   CanUserAddRows="False"   SelectionUnit="Cell"   SelectionMode="Extended" />
+    </Grid>
+</UserControl>

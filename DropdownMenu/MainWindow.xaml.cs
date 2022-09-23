@@ -33,24 +33,24 @@ namespace DropdownMenu
 
             menuRegister.Add(new SubItem("用户列表",
                 new UserControlCustomers()));
-            menuRegister.Add(new SubItem("用户服务", new UserControlProviders()));
-            menuRegister.Add(new SubItem("用户维护")); 
+            menuRegister.Add(new SubItem("用户服务", new UserControlSerives()));
+            menuRegister.Add(new SubItem("用户脚本",new UserControlBat())); 
             var item6 = new ItemMenu("用户管理", menuRegister, PackIconKind.Register);
 
             var menuSchedule = new List<SubItem>();
-            menuSchedule.Add(new SubItem("操作日志"));
-            menuSchedule.Add(new SubItem("其他")); 
+            menuSchedule.Add(new SubItem("操作日志",new UserControlLog()));
+            menuSchedule.Add(new SubItem("其他",new UserControlOther())); 
             var item1 = new ItemMenu("日志管理", menuSchedule, PackIconKind.Schedule);
 
             var menuReports = new List<SubItem>();
-            menuReports.Add(new SubItem("大屏展示"));
-            menuReports.Add(new SubItem("关于")); 
+            menuReports.Add(new SubItem("大屏展示", new UserControlOther()));
+            menuReports.Add(new SubItem("关于", new UserControlOther())); 
             var item2 = new ItemMenu("数据报告", menuReports, PackIconKind.FileReport);
  
 
             var menuFinancial = new List<SubItem>();
             menuFinancial.Add(new SubItem("关于",new UserControlliteratures()));
-            menuFinancial.Add(new SubItem("版权"));
+            menuFinancial.Add(new SubItem("版权", new UserControlOther()));
             var item4 = new ItemMenu("设置", menuFinancial, PackIconKind.ScaleBalance);
 
             

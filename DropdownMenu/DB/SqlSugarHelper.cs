@@ -34,6 +34,8 @@ namespace DropdownMenu.DB
             connectionConfig.InitKeyType = InitKeyType.Attribute;
             Console.WriteLine("SQLITE数据源获取");
             connectionConfig.ConnectionString = $"Data Source={path}";
+
+            
             using (SqlSugarClient sugarClient = new SqlSugarClient(connectionConfig))
             {
                 Console.WriteLine("命名空间过滤开始");
@@ -47,6 +49,8 @@ namespace DropdownMenu.DB
                 sugarClient.DbMaintenance.CreateDatabase();
                 Console.WriteLine("多表同步");
                 sugarClient.CodeFirst.SetStringDefaultLength(1024).InitTables(types);//多表同步  
+
+                
             }
 
             Console.WriteLine("数据库生成成功");
